@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpDatos = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtLimCre = new System.Windows.Forms.TextBox();
             this.gbUPago = new System.Windows.Forms.GroupBox();
             this.lblFecUPago = new System.Windows.Forms.Label();
             this.gbBal = new System.Windows.Forms.GroupBox();
@@ -69,10 +70,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dtvParent = new System.Windows.Forms.DataGridView();
-            this.cNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cApe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cParent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddPariente = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtNomPariente = new System.Windows.Forms.TextBox();
@@ -121,10 +118,13 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLimCre = new System.Windows.Forms.TextBox();
+            this.cNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cApe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cParent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tbpDatos.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.gbUPago.SuspendLayout();
             this.gbBal.SuspendLayout();
             this.pnTelefonos.SuspendLayout();
@@ -138,7 +138,6 @@
             this.gbTrabajo.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -181,6 +180,24 @@
             this.tbpDatos.TabIndex = 0;
             this.tbpDatos.Text = "Datos Personales";
             this.tbpDatos.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtLimCre);
+            this.groupBox1.Location = new System.Drawing.Point(375, 124);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(116, 53);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lim. Crédito";
+            // 
+            // txtLimCre
+            // 
+            this.txtLimCre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtLimCre.Location = new System.Drawing.Point(3, 19);
+            this.txtLimCre.Name = "txtLimCre";
+            this.txtLimCre.Size = new System.Drawing.Size(110, 23);
+            this.txtLimCre.TabIndex = 2;
             // 
             // gbUPago
             // 
@@ -467,6 +484,7 @@
             // 
             // txtTelPariente
             // 
+            this.txtTelPariente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTelPariente.Location = new System.Drawing.Point(79, 74);
             this.txtTelPariente.Name = "txtTelPariente";
             this.txtTelPariente.Size = new System.Drawing.Size(124, 23);
@@ -474,6 +492,7 @@
             // 
             // txtApePariente
             // 
+            this.txtApePariente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApePariente.Location = new System.Drawing.Point(79, 45);
             this.txtApePariente.Name = "txtApePariente";
             this.txtApePariente.Size = new System.Drawing.Size(124, 23);
@@ -508,8 +527,6 @@
             // 
             // dtvParent
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dtvParent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtvParent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvParent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cNom,
@@ -521,41 +538,17 @@
             this.dtvParent.GridColor = System.Drawing.SystemColors.Control;
             this.dtvParent.Location = new System.Drawing.Point(3, 107);
             this.dtvParent.Name = "dtvParent";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvParent.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtvParent.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtvParent.RowHeadersVisible = false;
             this.dtvParent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvParent.Size = new System.Drawing.Size(479, 105);
             this.dtvParent.TabIndex = 32;
-            // 
-            // cNom
-            // 
-            this.cNom.HeaderText = "Nombre";
-            this.cNom.Name = "cNom";
-            this.cNom.Width = 149;
-            // 
-            // cApe
-            // 
-            this.cApe.HeaderText = "Apellido";
-            this.cApe.Name = "cApe";
-            this.cApe.Width = 150;
-            // 
-            // cTel
-            // 
-            this.cTel.HeaderText = "Teléfono";
-            this.cTel.Name = "cTel";
-            this.cTel.Width = 77;
-            // 
-            // cParent
-            // 
-            this.cParent.HeaderText = "Parentezco";
-            this.cParent.Name = "cParent";
             // 
             // btnAddPariente
             // 
@@ -578,6 +571,7 @@
             // 
             // txtNomPariente
             // 
+            this.txtNomPariente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNomPariente.Location = new System.Drawing.Point(79, 16);
             this.txtNomPariente.Name = "txtNomPariente";
             this.txtNomPariente.Size = new System.Drawing.Size(124, 23);
@@ -1058,23 +1052,28 @@
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton2.ToolTipText = "Mantenimiento Ciudad";
             // 
-            // groupBox1
+            // cNom
             // 
-            this.groupBox1.Controls.Add(this.txtLimCre);
-            this.groupBox1.Location = new System.Drawing.Point(375, 124);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(116, 53);
-            this.groupBox1.TabIndex = 26;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lim. Crédito";
+            this.cNom.HeaderText = "Nombre";
+            this.cNom.Name = "cNom";
+            this.cNom.Width = 149;
             // 
-            // txtLimCre
+            // cApe
             // 
-            this.txtLimCre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtLimCre.Location = new System.Drawing.Point(3, 19);
-            this.txtLimCre.Name = "txtLimCre";
-            this.txtLimCre.Size = new System.Drawing.Size(110, 23);
-            this.txtLimCre.TabIndex = 2;
+            this.cApe.HeaderText = "Apellido";
+            this.cApe.Name = "cApe";
+            this.cApe.Width = 125;
+            // 
+            // cTel
+            // 
+            this.cTel.HeaderText = "Teléfono";
+            this.cTel.Name = "cTel";
+            this.cTel.Width = 102;
+            // 
+            // cParent
+            // 
+            this.cParent.HeaderText = "Parentezco";
+            this.cParent.Name = "cParent";
             // 
             // frmClientes
             // 
@@ -1098,6 +1097,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tbpDatos.ResumeLayout(false);
             this.tbpDatos.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.gbUPago.ResumeLayout(false);
             this.gbBal.ResumeLayout(false);
             this.pnTelefonos.ResumeLayout(false);
@@ -1119,8 +1120,6 @@
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1211,13 +1210,13 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cNom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cApe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cTel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cParent;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtLimCre;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cApe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cParent;
     }
 }

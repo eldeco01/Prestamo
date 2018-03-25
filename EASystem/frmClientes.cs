@@ -168,7 +168,18 @@ namespace EASystem
 
         private void btnAddPariente_Click(object sender, EventArgs e)
         {
-            dtvParent.Rows.Add(txtNomPariente.Text, txtApePariente.Text, txtTelPariente.Text,cbParentezco.SelectedValue.ToString());
+            if(txtNomPariente.Text !="" && txtApePariente.Text!="" && txtTelPariente.Text != "")
+            {
+                dtvParent.Rows.Add(txtNomPariente.Text, txtApePariente.Text, txtTelPariente.Text, parentDal.findOne(cbParentezco.SelectedValue.ToString()));
+                txtNomPariente.Clear();
+                txtApePariente.Clear();
+                txtTelPariente.Clear();
+                txtNomPariente.Focus();
+            }
+            else
+            {
+                txtNomPariente.Focus();
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

@@ -141,5 +141,30 @@ namespace EASystem
 
             return retorno;
         }
+
+        public static string findOne(string id)
+        {
+            string nomParient = "";
+            MySqlConnection conexion = Conectando.conectando();
+            try
+            {
+                MySqlCommand _comando = new MySqlCommand(string.Format(
+                    "SELECT parentezco FROM parentezco where id=" + id), conexion);
+                MySqlDataReader _reader = _comando.ExecuteReader();
+                while (_reader.Read())
+                {
+                    nomParient = _reader.GetString(0);
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString(), "ERROR AL BUSCAR EL REGISTRO PARENTEZCO");
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return nomParient;
+        }
     }
 }
