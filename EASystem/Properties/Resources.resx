@@ -127,6 +127,9 @@
   <data name="telefono-inteligente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\telefono-inteligente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add User Male_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add User Male_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="instrumentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instrumentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,9 +154,6 @@
   <data name="controlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\controlar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-doble-abajo-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-doble-abajo-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Sales Performance_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sales Performance_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,8 +166,8 @@
   <data name="Buscar Cliente 24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Buscar Cliente 24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="conf_producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\conf_producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-doble-abajo-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-doble-abajo-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="instrumentos-36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instrumentos-36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,6 +183,9 @@
   </data>
   <data name="cobrador 24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cobrador 24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="conf_producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\conf_producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Undo_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Undo_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,7 +232,7 @@
   <data name="instrumentos 24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instrumentos 24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add User Male_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add User Male_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ok Hand_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok Hand_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
