@@ -42,7 +42,7 @@ namespace EASystem
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmCiudadA);
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmCiudad);
             if (frm != null)
             {
                 frm.BringToFront();
@@ -50,7 +50,7 @@ namespace EASystem
             }
             else
             {
-                frm = new frmCiudadA(mfrm);
+                frm = new frmCiudad(mfrm);
                 frm.MdiParent = mfrm;
                 frm.Show();
             }
@@ -75,9 +75,46 @@ namespace EASystem
             fillCbSec();
             fillCbTiTel();
             fillCbParent();
+            fillCbZona();
 
             dtvParent.AllowUserToAddRows = false;
             dtvParent.Rows.Clear();
+
+            
+
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtCed.Clear();
+            txtId.Clear();
+            txtDir.Clear();
+            txtLimCre.Clear();
+            txtTel.Clear();
+            listView1.Items.Clear();//lisview de los telefonos
+            
+            //pestaña Conyugue parientes
+            txtNombreCon.Clear();
+            txtCedCon.Clear();
+            txtTelCon.Clear();
+            txtNomPariente.Clear();
+            txtApePariente.Clear();
+            txtTelPariente.Clear();
+            //pestaña Datos laborales
+            txtNomEmp.Clear();
+            txtPuesto.Clear();
+            txtTelEmp.Clear();
+            txtSalario.Clear();
+            dtpFechaIn.ResetText();
+            rdbFiador.Select();
+            txtNomGar.Clear();
+            txtTelGar.Clear();
+            txtSalGar.Clear();
+            txtEmpGar.Clear();
+            txtPuestoGar.Clear();
+            dtpFecInGar.ResetText();
+
+            tabControl1.SelectedIndex = 0;
+            txtCed.Focus();
+
         }
 
         private void fillcbCiu()
@@ -109,6 +146,20 @@ namespace EASystem
             cbParentezco.DisplayMember = "parentezco";
             cbParentezco.ValueMember = "id";
             cbParentezco.DataSource = fillControles.fillCbox("parentezco", "id");
+        }
+        private void fillCbCobrador()
+        {
+            //cbParentezco.DataSource = null;
+            //cbParentezco.DisplayMember = "parentezco";
+            //cbParentezco.ValueMember = "id";
+            //cbParentezco.DataSource = fillControles.fillCbox("parentezco", "id");
+        }
+        private void fillCbZona()
+        {
+            cbZona.DataSource = null;
+            cbZona.DisplayMember = "nomzona";
+            cbZona.ValueMember = "id";
+            cbZona.DataSource = fillControles.fillCbox("zona", "id");
         }
         private void btnAtras_Click(object sender, EventArgs e)
         {
@@ -185,6 +236,16 @@ namespace EASystem
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             rNew();
+        }
+
+        private void Ced_Leave(object sender, EventArgs e)
+        {
+            FormatTxt.formatCedula(sender, e);
+        }
+
+        private void Tel_Leave(object sender, EventArgs e)
+        {
+            FormatTxt.formatTel(sender, e);
         }
     }
 }

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace EASystem
 {
-	public partial class frmCiudadA : Form
+	public partial class frmCiudad : Form
 	{
 		private frmPrincipal mfrm;
         private Boolean modSalvar = false;
-        public frmCiudadA(frmPrincipal mform)
+        public frmCiudad(frmPrincipal mform)
 		{
 			InitializeComponent();
 			mfrm = mform;

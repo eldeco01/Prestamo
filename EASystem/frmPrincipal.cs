@@ -30,7 +30,7 @@ namespace EASystem
 
 		private void ciudadToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmCiudadA);
+			Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmCiudad);
 			if (frm != null)
 			{
 				frm.BringToFront();
@@ -38,7 +38,7 @@ namespace EASystem
 			}
 			else
 			{
-				frm = new frmCiudadA(this);
+				frm = new frmCiudad(this);
 				frm.MdiParent = this;
 				frm.Show();
 			}
@@ -159,6 +159,22 @@ namespace EASystem
                 frm.Show();
             }
         }
+
+        private void cobradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmCobrador);
+            if (frm != null)
+            {
+                frm.BringToFront();
+                return;
+            }
+            else
+            {
+                frm = new frmCobrador(this);
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
-	}
+}
 

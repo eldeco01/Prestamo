@@ -1,6 +1,6 @@
 ﻿namespace EASystem
 {
-	partial class frmCiudadA
+	partial class frmCiudad
 	{
 		/// <summary>
 		/// Required designer variable.
