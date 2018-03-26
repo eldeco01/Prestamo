@@ -169,7 +169,7 @@ namespace EASystem
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmCiudad);
+            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is frmCiudadA);
             if (frm != null)
             {
                 frm.BringToFront();
@@ -177,7 +177,7 @@ namespace EASystem
             }
             else
             {
-                frm = new frmCiudad(mfrm);
+                frm = new frmCiudadA(mfrm);
                 frm.MdiParent = mfrm;
                 frm.Show();
             }

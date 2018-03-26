@@ -323,16 +323,6 @@ namespace EASystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Plus_22px {
-            get {
-                object obj = ResourceManager.GetObject("Plus_22px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap receptor_del_telefono {
             get {
                 object obj = ResourceManager.GetObject("receptor-del-telefono", resourceCulture);

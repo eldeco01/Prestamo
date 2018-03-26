@@ -113,7 +113,7 @@
             this.clientesToolStripMenuItem.Image = global::EASystem.Properties.Resources.Clientes_24;
             this.clientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -121,20 +121,19 @@
             // 
             this.cobradorToolStripMenuItem.Image = global::EASystem.Properties.Resources.cobrador_24x24;
             this.cobradorToolStripMenuItem.Name = "cobradorToolStripMenuItem";
-            this.cobradorToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.cobradorToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.cobradorToolStripMenuItem.Text = "Cobrador";
-            this.cobradorToolStripMenuItem.Click += new System.EventHandler(this.cobradorToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(185, 6);
             // 
             // sectorToolStripMenuItem
             // 
             this.sectorToolStripMenuItem.Image = global::EASystem.Properties.Resources.barrio_24;
             this.sectorToolStripMenuItem.Name = "sectorToolStripMenuItem";
-            this.sectorToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.sectorToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.sectorToolStripMenuItem.Text = "Sector";
             this.sectorToolStripMenuItem.Click += new System.EventHandler(this.sectorToolStripMenuItem_Click);
             // 
@@ -142,14 +141,14 @@
             // 
             this.ciudadToolStripMenuItem.Image = global::EASystem.Properties.Resources.ciudad_24;
             this.ciudadToolStripMenuItem.Name = "ciudadToolStripMenuItem";
-            this.ciudadToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
+            this.ciudadToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
             this.ciudadToolStripMenuItem.Text = "Ciudad";
             this.ciudadToolStripMenuItem.Click += new System.EventHandler(this.ciudadToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(185, 6);
             // 
             // toolStripMenuItem1
             // 
@@ -158,7 +157,7 @@
             this.zonaToolStripMenuItem1,
             this.parentezcoToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(160, 30);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(188, 30);
             this.toolStripMenuItem1.Text = "Tablillas";
             // 
             // tipoTelToolStripMenuItem
@@ -242,6 +241,7 @@
             this.Name = "frmPrincipal";
             this.Text = "PRESTAME";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

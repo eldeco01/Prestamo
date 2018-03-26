@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +10,11 @@ using System.Windows.Forms;
 
 namespace EASystem
 {
-	public partial class frmCobrador : Form
+	public partial class frmCiudadA : Form
 	{
 		private frmPrincipal mfrm;
         private Boolean modSalvar = false;
-        public frmCobrador(frmPrincipal mform)
+        public frmCiudadA(frmPrincipal mform)
 		{
 			InitializeComponent();
 			mfrm = mform;
@@ -42,29 +41,26 @@ namespace EASystem
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Cobrador pCobrador = new Cobrador();
-            pCobrador.id = int.Parse(txtId.Text.Trim());
-            pCobrador.nombre = txtNombre.Text.Trim();
-            pCobrador.dir = txtDir.Text.Trim();
-            pCobrador.tel = txtTel.Text.Trim();
-            pCobrador.comision = float.Parse(txtComis.Text);
-            int updResul = CobradorDal.update(pCobrador);
+            ciudad pCiudad = new ciudad();
+            pCiudad.id = int.Parse(txtId.Text.Trim());
+            pCiudad.nomCiu = txtNombre.Text.Trim();
+            int updResul = ciudadDal.updCiudad(pCiudad);
             if (updResul > 0)
             {
-                MessageBox.Show("Cobrador Modificado con exito!!", "Modificando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ciudad Modificado con exito!!", "Modificando", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 rNew();
             }
             else
             {
-                int resultado = CobradorDal.insertar(pCobrador);
+                int resultado = ciudadDal.addCiudad(pCiudad);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Cobrador Guardada con exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ciudad Guardada con exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     rNew();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardad el registro", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo guardad la Ciudad", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             } 
         }
@@ -81,27 +77,52 @@ namespace EASystem
 
         private void rNew()
         {
-            txtId.Text = nextNum.buscar("idcobrador").ToString("000");
+            txtId.Text = nextNum.buscar("numciud").ToString();
            // lblEstado.BackColor = Control;
             lblEstado.Text = "<<<Nuevo>>>";
             lblEstado.ForeColor= Color.FromArgb(0, 192, 0);
             txtId.Enabled = false;
             txtNombre.Clear();
-            txtDir.Clear();
-            txtTel.Clear();
-            txtComis.Clear();
             ctrlInicio(false);
             txtNombre.Focus();
+            cargarDgv();
+
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            ctrlInicio(true); 
+            ctrlInicio(true);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             rNew();
+        }
+
+        private void cargarDgv()
+        {
+            
+            dgvCiudad.Columns[0].DataPropertyName = "id";
+            dgvCiudad.Columns[1].DataPropertyName = "nomCiu";
+
+            dgvCiudad.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+            dgvCiudad.DataSource = ciudadDal.buscar();
+            dgvCiudad.Columns[0].Width = 40;
+            dgvCiudad.Columns[1].Width = 257;
+        }
+
+        private void dgvCiudad_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ciudad modCiu = new ciudad();
+            modCiu = ciudadDal.ObtenerCiudad((int)dgvCiudad.CurrentRow.Cells["ID"].Value);
+            lblEstado.Text = "<<<Consultando>>>";
+            lblEstado.ForeColor = Color.FromArgb(65, 105, 225);
+            txtId.Text = modCiu.id.ToString();
+            txtNombre.Text = modCiu.nomCiu.ToString();
+            ctrlInicio(true);
+            txtNombre.Enabled = false;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -120,9 +141,10 @@ namespace EASystem
                 lblEstado.Text = "<<<ELIMINANDO>>>";
                 lblEstado.ForeColor = Color.FromArgb(255, 255, 255);
                 
-                Cobrador objCobrador = new Cobrador();
-                objCobrador.id = int.Parse(txtId.Text.Trim());
-                int delResul = CobradorDal.delete(objCobrador);
+                ciudad pCiudad = new ciudad();
+                pCiudad.id = int.Parse(txtId.Text.Trim());
+                pCiudad.nomCiu = txtNombre.Text.Trim();
+                int delResul = ciudadDal.delCiudad(pCiudad);
                 if (delResul > 0)
                 {
                     MessageBox.Show("¡Registro ELIMINADO con exito!", "¡Eliminando!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -137,72 +159,9 @@ namespace EASystem
             
         }
 
-        bool Punto = true;
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void frmCiudadA_Load(object sender, EventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != 46 && e.KeyChar != (char)Keys.M)
-                e.Handled = true;
-            else if (e.KeyChar == 46)
-            {
-                if (Punto)
-                    Punto = false;
-                else e.Handled = true;
-            }
-        }
 
-        private void txtSelectAll(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            Punto = true;
-            tb.SelectAll();
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            FormatTxt.formatTel(sender,e);
-        }
-
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-            FormatTxt.ControladorKeyDown(sender, e);
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBox3_Leave(object sender, EventArgs e)
-        {
-            FormatTxt.formatDecPorcentaje(sender, e);
-        }
-
-        private void txtTel_Enter(object sender, EventArgs e)
-        {
-            txtTel.SelectAll();
         }
     }
-
-
 }
