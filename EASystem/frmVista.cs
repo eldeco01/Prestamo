@@ -17,8 +17,28 @@ namespace EASystem
             InitializeComponent();
         }
 
+
+        private void cargarDgv()
+        {
+
+            dgvBuscar.Columns[0].DataPropertyName = "id";
+            dgvBuscar.Columns[1].DataPropertyName = "idCiu";
+            dgvBuscar.Columns[2].DataPropertyName = "nomSector";
+
+            dgvBuscar.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            //string test = cbCiudad.SelectedValue.ToString();
+
+           // dgvBuscar.DataSource = .buscar(indexCiud);
+            dgvBuscar.Columns[0].Width = 40;
+            dgvBuscar.Columns[2].Width = 257;
+            dgvBuscar.Columns[1].Visible = false;
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
+
+
 
         }
     }

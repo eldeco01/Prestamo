@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dtvBuscar = new System.Windows.Forms.DataGridView();
+            this.dgvBuscar = new System.Windows.Forms.DataGridView();
             this.cID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cApe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,34 +42,34 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
             this.SuspendLayout();
             // 
-            // dtvBuscar
+            // dgvBuscar
             // 
-            this.dtvBuscar.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dtvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvBuscar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBuscar.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cID,
             this.cApe,
             this.pTel,
             this.pDir,
             this.pComi});
-            this.dtvBuscar.EnableHeadersVisualStyles = false;
-            this.dtvBuscar.GridColor = System.Drawing.SystemColors.Control;
-            this.dtvBuscar.Location = new System.Drawing.Point(0, 47);
-            this.dtvBuscar.Name = "dtvBuscar";
+            this.dgvBuscar.EnableHeadersVisualStyles = false;
+            this.dgvBuscar.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvBuscar.Location = new System.Drawing.Point(0, 47);
+            this.dgvBuscar.Name = "dgvBuscar";
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtvBuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtvBuscar.RowHeadersVisible = false;
-            this.dtvBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtvBuscar.Size = new System.Drawing.Size(453, 114);
-            this.dtvBuscar.TabIndex = 33;
+            this.dgvBuscar.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBuscar.RowHeadersVisible = false;
+            this.dgvBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBuscar.Size = new System.Drawing.Size(453, 114);
+            this.dgvBuscar.TabIndex = 33;
             // 
             // cID
             // 
@@ -122,6 +122,7 @@
             // textBox1
             // 
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(15, 182);
             this.textBox1.MaxLength = 30;
@@ -142,6 +143,7 @@
             // textBox2
             // 
             this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(15, 228);
             this.textBox2.MaxLength = 30;
@@ -189,11 +191,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.dtvBuscar);
+            this.Controls.Add(this.dgvBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVista";
-            this.Text = "frmVista";
-            ((System.ComponentModel.ISupportInitialize)(this.dtvBuscar)).EndInit();
+            this.Text = "Buscar Cobrador";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,7 +203,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dtvBuscar;
+        private System.Windows.Forms.DataGridView dgvBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn cID;
         private System.Windows.Forms.DataGridViewTextBoxColumn cApe;

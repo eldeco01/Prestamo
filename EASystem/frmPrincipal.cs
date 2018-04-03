@@ -164,6 +164,11 @@ namespace EASystem
         {
 
         }
+
+        private void cobradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 	}
 
