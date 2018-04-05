@@ -203,6 +203,16 @@ namespace EASystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Double_Up_20px {
+            get {
+                object obj = ResourceManager.GetObject("Double Up_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Flecha_agregar {
             get {
                 object obj = ResourceManager.GetObject("Flecha agregar", resourceCulture);

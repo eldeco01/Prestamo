@@ -205,6 +205,9 @@
   <data name="instrumentos-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instrumentos-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ok Hand_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok Hand_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="unir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,7 +235,7 @@
   <data name="instrumentos 24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instrumentos 24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ok Hand_22px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ok Hand_22px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Double Up_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Double Up_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

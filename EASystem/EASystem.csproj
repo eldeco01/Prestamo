@@ -72,9 +72,6 @@
     <Compile Include="test1.Designer.cs">
       <DependentUpon>test1.cs</DependentUpon>
     </Compile>
-    <Compile Include="formatTxt.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +134,7 @@
     <Compile Include="sectorDal.cs" />
     <Compile Include="Tipos.cs" />
     <Compile Include="parentDal.cs" />
+    <Compile Include="formatTxt.cs" />
     <Compile Include="zonaDal.cs" />
     <Compile Include="tiTelDala.cs" />
     <EmbeddedResource Include="frmPrestamo.resx">
@@ -314,6 +312,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ok Hand_22px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Double Up_20px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

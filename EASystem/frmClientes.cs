@@ -75,9 +75,45 @@ namespace EASystem
             fillCbSec();
             fillCbTiTel();
             fillCbParent();
+            cbCivil.SelectedIndex = 0;
+            //limpiar los txt 
+            txtCed.Clear();
+            txtId.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtEmail.Clear();
+            txtDir.Clear();
+            txtTel.Clear();
+            txtLimCre.Clear();
+            txtNombreCon.Clear();
+            txtCedCon.Clear();
+            txtTelCon.Clear();
+            txtNomPariente.Clear();
+            txtApePariente.Clear();
+            txtTelPariente.Clear();
+            txtNomEmp.Clear();
+            txtTelEmp.Clear();
+            txtSalario.Clear();
+            txtCedGar.Clear();
+            txtPuestoGar.Clear();
+            txtSalGar.Clear();
+            txtEmpGar.Clear();
+            txtCobrador.Clear();
+            txtZona.Clear();
+
+            //limpiar listviews
+            listView1.Items.Clear();
+
+            //dataTimerPickup
+            dtpFecNac.ResetText();
+            dtpFechaIn.ResetText();
+            dtpFecInGar.ResetText();
 
             dtvParent.AllowUserToAddRows = false;
             dtvParent.Rows.Clear();
+
+            tabControl1.SelectedIndex = 0;
+            txtCed.Focus();
         }
 
         private void fillcbCiu()
@@ -110,6 +146,7 @@ namespace EASystem
             cbParentezco.ValueMember = "id";
             cbParentezco.DataSource = fillControles.fillCbox("parentezco", "id");
         }
+
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -155,6 +192,11 @@ namespace EASystem
             }
         }
 
+        private void soloNum(object sender, KeyPressEventArgs e)
+        {
+            formatTxt.valNumeric(sender, e);
+        }
+
         private void btnAddTel_Click(object sender, EventArgs e)
         {
             if (txtTel.Text != "")
@@ -168,12 +210,57 @@ namespace EASystem
 
         private void btnAddPariente_Click(object sender, EventArgs e)
         {
-            dtvParent.Rows.Add(txtNomPariente.Text, txtApePariente.Text, txtTelPariente.Text,cbParentezco.SelectedValue.ToString());
+            Tipos pObjet = new Tipos();
+            if(txtNomPariente.Text!="" && txtApePariente.Text!="" && txtTelPariente.Text != "")
+            {
+                pObjet = parentDal.obtenerReg(int.Parse(cbParentezco.SelectedValue.ToString()));
+                dtvParent.Rows.Add(txtNomPariente.Text, txtApePariente.Text, txtTelPariente.Text, pObjet.nom);
+                txtNomPariente.Clear();
+                txtApePariente.Clear(); txtTelPariente.Clear();
+                cbParentezco.SelectedIndex = 0;
+            }
+            txtNomPariente.Focus();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             rNew();
+        }
+
+        private void txtTel_Leave(object sender, EventArgs e)
+        {
+            formatTxt.formatTel(sender, e);
+        }
+
+        private void txtCed_Leave(object sender, EventArgs e)
+        {
+            formatTxt.formatCed(sender, e);
+        }
+
+        private void formatCedLeve(object sender, EventArgs e)
+        {
+            formatTxt.formatCed(sender, e);
+        }
+
+
+
+        private void btnQuitPar_Click(object sender, EventArgs e)
+        {
+            if (dtvParent.Rows.Count != 0)
+            {
+                dtvParent.Rows.Remove(dtvParent.CurrentRow);
+                txtNomPariente.Focus();
+            }
+            else
+            {
+                txtNomPariente.Focus();
+            }
+            
+        }
+
+        private void txtSelectAll(object sender, EventArgs e)
+        {
+            formatTxt.txtSelectAll(sender, e);
         }
     }
 }
